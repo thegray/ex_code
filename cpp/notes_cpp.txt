@@ -1,0 +1,10 @@
+compiling c++:
+
+gcc [source file] -o [output file].exe (-std=c++11)
+or
+g++ ...
+
+statement in () is optional
+
+for help, add parameter:
+--help

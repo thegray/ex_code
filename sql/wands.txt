@@ -1,0 +1,10 @@
+https://www.hackerrank.com/challenges/harry-potter-and-wands/problem
+
+select w.id, p.age, w.coins_needed, w.power from wands as w
+inner join wands_property as p on p.code = w.code 
+where p.is_evil = 0
+and w.coins_needed = (select min(w1.coins_needed) from wands as w1
+                     inner join wands_property as p1 on p1.code = w1.code
+                     where p1.age = p.age and w1.power = w.power)
+
+order by w.power desc, p.age desc;

@@ -1,0 +1,9 @@
+https://www.hackerrank.com/challenges/binary-search-tree-1/problem
+
+select b1.n, 
+case when b1.p is NULL then 'Root' 
+     when (select count(*) from bst where b1.n = p) > 0 then 'Inner' 
+     else 'Leaf'
+     end
+from bst as b1
+order by n;

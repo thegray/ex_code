@@ -1,0 +1,78 @@
+standar:
+
+n = int(input().strip()) #get input and convert to single int
+arr = [int(arr_temp) for arr_temp in input().strip().split(' ')] #get input and convert to array of int
+arr = input().strip().split(' ') #get input and return list/array of string
+
+------------
+
+baca sampe ga ada input lg:
+
+while True:
+	try:
+		inputString = input().strip()
+	except EOFError:
+		break;
+
+------------
+
+main in python:
+
+if __name__ == '__main__':
+    main()
+
+example:
+
+import random  # import things
+
+def SomeFunction(number):
+	# do some processing here
+        return False
+    
+if __name__ == '__main__':
+    n = int(input().strip())
+    for i in range(n):
+        num = int(input().strip())
+        if (SomeFunction(num)):
+            print("True")
+        else:
+            print("False")
+
+------------
+
+input string with space-separated :
+
+listOfString = input().split(" ")  # return list of string after splitted
+
+convert the result to int :        # strings contained must be numeric
+py2:
+results = map(int, listOfString)   
+py3:
+results = list(map(int, listOfString))
+
+or :
+
+results = [int(i) for i in listOfString]
+or :
+results = [int(i) for i in input().split(" ")]
+sorted the input : 
+results = sorted([int(i) for i in input().split(" ")])
+
+another example:
+n,k = input().strip().split(' ')
+n,k = [int(n), int(k)] 
+or 
+n, k = [str(n), str(k)]
+
+----------
+
+ML/Stat 
+rows with space-separated ex: 0.1 0.2 5.5
+                              0.8 0.2 17.3
+                              9.5 1.6 19.6
+
+lstdata = []
+for x in range(rowcount):
+    rowinput = list(map(float, input().split(' ')))
+    lstdata.append(rowinput)
+
